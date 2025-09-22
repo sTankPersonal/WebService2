@@ -7,5 +7,26 @@
   "shortName": "microservice",
   "tags": { "language": "C#", "type": "project" },
   "sourceName": "Template",
-  "preferNameDirectory": true
+  "preferNameDirectory": true,
+  "postActions": [
+    {
+      "actionId": "C3F1C215-1A03-4D6C-8F8B-7A7E2E5BAA8B",
+      "args": {
+        "executable": "dotnet",
+        "args": [
+          "sln",
+          "DDDMicroserviceTemplate.sln",
+          "add",
+          "src/services/${name}/${name}.csproj"
+        ]
+      },
+      "manualInstructions": [
+        {
+          "text": "Add the new project to your solution: dotnet sln WebService2.sln add src/services/${name}/${name}.csproj"
+        }
+      ],
+      "continueOnError": true,
+      "description": "Adds the new microservice project to the solution."
+    }
+  ]
 }

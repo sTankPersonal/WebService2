@@ -3,7 +3,7 @@ using Identity.Domain.Entities;
 
 namespace Identity.Domain.Interfaces.Repositories
 {
-    public interface ICategoryRepository<TId> : IRepository<Category<TId>>
+    public interface ICategoryRepository : IRepository<Category>
     {
     }
 }

@@ -4,7 +4,7 @@ using Identity.Application.DTOs.Category;
 
 namespace Identity.Application.Interfaces.Services
 {
-    public interface ICategoryService : IDomainService<Guid>
+    public interface ICategoryService
     {
         Task<PagedResult<CategoryDto>> GetAllAsync(int pageNumber, int pageSize, string searchName);
         Task<CategoryDto> GetByIdAsync(Guid id);
